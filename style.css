@@ -1,0 +1,398 @@
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'montserrat';
+  color: white;
+ }
+
+ html, body{
+  height: 100%;
+  perspective: 800px;
+  width: 100%;
+ }
+#but{
+    background-color: red;
+    color: black;
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+}
+#page1 button:hover{
+background-color: transparent;
+color: white;
+border-color: red;
+}
+ #nav{
+  height: 80px;
+  width:100% ;
+  display: flex;
+  align-items: flex-start;
+  padding: 0 150px ;
+  gap: 46px ;
+  position:  fixed;
+  z-index: 99;
+ }
+ #nav img{
+  height: 80px;
+  position: relative;
+  right: 150px;
+  bottom: 2px;
+ }
+ #nav h4{
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+  position: relative;
+  top: 30px;
+  }
+  #nav h4:hover{
+    background-color: transparent;
+    color: red;
+  }
+  #nav a{
+    text-decoration: none;
+  }
+  video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+  }
+  #main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+  }
+  #page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    bottom: 250px;
+}
+#page1 h1{
+font-size: 80px;
+font-weight: 900;
+position: relative;
+color: red;
+}
+#page1 h1::before{
+    content:"LET'S GIVE WINGS TO YOUR DREAMS";
+    position: absolute;
+    color:black;
+    top: -4px;
+    left: -4px;
+    z-index: -1;
+}
+#page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#page1 p{
+    font-size: 15px;
+    font-weight: 500;
+    width: 73.75%;
+ }
+ #scroller{
+    background-color:transparent;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+    bottom: 30px;
+ }
+ #scroller-in-1{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite;
+ }
+ #scroller-in-2{
+    display: inline-block;
+    white-space: nowrap;
+ }
+ #scroller h4{
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: gilroy;
+    margin-right: 15px;
+    color: transparent;
+    transition: all linear 0.5s;
+    -webkit-text-stroke:1px white ;
+ }
+ #scroller h4:hover{
+    color: red;
+ }
+ @keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+ }
+ #about{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+ }
+ #about p{
+    font-size: 15px;
+    font-weight: 500;
+    width: 50%;
+    text-align: center;
+ }
+ #about img{
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+ }
+ #about h3{
+    font-size: 50px;
+    font-weight: 800;
+ }
+ #p2{
+    position: relative;
+    left: 70px;
+ }
+ #img1{
+    position: relative;
+    left: 80px;
+ }
+ #img2{
+    position: relative;
+    right: 80px;
+ }
+ #cards-container{ 
+  height: 60vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+ }
+ .card{
+    height: 80%;
+    width: 24%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+ }
+ #card1{
+    background-image: url(https://images.unsplash.com/photo-1628707094060-bdc917562569?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhlbGljb3B0ZXJzfGVufDB8fDB8fHww);
+ }
+ #card2{
+    background-image: url(https://plus.unsplash.com/premium_photo-1661963288471-b72fb81c61b2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fGhlbGljb3B0ZXJzfGVufDB8fDB8fHww);
+ }
+ #card3{
+    background-image: url(https://images.unsplash.com/photo-1528474078150-7324b0375b1c?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+ }
+ .overlay{
+  height: 100%;
+  width: 100%;  
+  background-color: black;
+  padding-top: 160px;
+  opacity: 0;
+  transition: all ease 0.6s;
+ }
+ .overlay h4{
+   color: white;
+   font-size: 20px;
+   text-transform: uppercase;
+   font-weight: 800;
+   white-space: 20px;
+   margin-bottom: 10px;
+ }
+ .overlay p{
+    color: white;
+    font-size: 20px ;
+    position: relative;
+    bottom: 20px;
+    left: 10px;
+ }
+ .card:hover .overlay{
+    opacity: 1;
+ }
+ .card:hover{
+    transform: rotate3d(-1,1,0,10deg);
+ }
+ .helicopter {
+    display: flex;
+    position: relative;
+    top: 680px;
+    overflow: hidden;
+  }
+  
+  .heli {
+    flex: 33.33%;
+    padding: 5px;
+    transition: all ease 0.5s;
+    animation: imgscroll 20s linear infinite;
+  }
+  @keyframes imgscroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+ }
+ .overlays{
+    height: 100%;
+    width: 100%;  
+    background-color:transparent;
+    opacity: 0;
+    transition: all ease 0.5s;
+   }
+
+   .overlays h4{
+    color: cyan;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+    white-space: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+ .heli:hover .overlays{
+    opacity: 1;
+ }
+ .heli:hover{
+    transform: rotate3d(-1,1,0,10deg);
+ }
+ .helicopter img{
+    border-radius: 30px;
+ }
+ .overlays button{
+    background-color: red;
+    color: black;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px; 
+    position: relative;
+ }
+ div fieldset{
+    width:400px;
+    height: 405px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+ }
+ form input{
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    height: 30px;
+ }
+ form ::placeholder{
+    text-align: center;
+    color: white;
+ }
+ #bottom{
+    position: relative;
+    right: 425px;
+    bottom: 20px;
+ }
+ form button{
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+ }
+ form:hover{
+    background-color: red;
+    color: cyan;
+    border-radius: 20px;
+    width:400px;
+    height: 405px;
+    transition: all linear 0.6s;
+ }
+ span{
+    position: relative;
+    left: 850px;
+    bottom: 350px;
+ }
+  span fieldset{
+    width:490px;
+    height: 100px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+ }
+ span p{
+    text-align: center;
+    position: relative;
+    top: 8px;
+ }
+ span h1{
+    position: relative;
+    left: 170px;
+ }
+ .pack fieldset{
+    width:490px;
+    height: 300px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+ }
+ span fieldset:hover{
+    width:490px;
+    height: 100px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+    background-color: red;
+    transition: all linear 0.6s;
+ }
+ .last p{
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    bottom: 120px;
+    animation: slide 20s linear infinite;
+ }
+ @keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }  
+ }
+ .last h1{
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+    color: orangered;
+ }
+ .last h5{
+    position: relative;
+    bottom: 45px;
+    animation: slide 5s linear infinite;
+    color: black;
+ }
+ @keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }  
+ }
